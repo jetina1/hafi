@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HAFTOM TAEME - The 28th Celebration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#bec6e0",
+                        "surface-container": "#1d2022",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#3c2f00",
+                        "surface-dim": "#101415",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#46464c",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface-variant": "#323537",
+                        "on-background": "#e0e3e5",
+                        "secondary-container": "#af8d11",
+                        "on-tertiary": "#283044",
+                        "surface-container-lowest": "#0b0f10",
+                        "primary-container": "#020617",
+                        "surface": "#101415",
+                        "on-primary-fixed-variant": "#40465a",
+                        "on-primary-container": "#72778d",
+                        "inverse-surface": "#e0e3e5",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary-fixed": "#131b2e",
+                        "surface-container-low": "#191c1e",
+                        "tertiary-container": "#010618",
+                        "inverse-on-surface": "#2d3133",
+                        "on-tertiary-container": "#70788f",
+                        "primary-fixed-dim": "#c0c6de",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-error": "#690005",
+                        "surface-container-high": "#272a2c",
+                        "on-surface": "#e0e3e5",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary": "#2a3043",
+                        "primary": "#c0c6de",
+                        "surface-tint": "#c0c6de",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#dce1fb",
+                        "surface-container-highest": "#323537",
+                        "on-surface-variant": "#c6c6cd",
+                        "background": "#101415",
+                        "secondary-fixed": "#ffe088",
+                        "surface-bright": "#363a3b",
+                        "on-primary-fixed": "#151b2d",
+                        "secondary": "#e9c349",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "inverse-primary": "#585e73",
+                        "outline": "#909097"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max-width": "1280px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "label-caps": ["Manrope"],
+                        "display-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id] {
+            scroll-margin-top: 96px;
+        }
+        @media (min-width: 768px) {
+            section[id] {
+                scroll-margin-top: 120px;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fine-line-gold {
+            background: linear-gradient(90deg, transparent 0%, rgba(233, 195, 73, 0.3) 50%, transparent 100%);
+            height: 1px;
+            width: 100%;
+        }
+        .gold-shimmer {
+            background: linear-gradient(135deg, #e9c349 0%, #ffe088 50%, #e9c349 100%);
+            background-size: 200% 200%;
+        }
+        .bg-obsidian {
+            background-color: #0b0f10;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(233, 195, 73, 0.4);
+        }
+        .gift-reveal-card {
+            perspective: 1000px;
+        }
+        .gift-reveal-inner {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .gift-reveal-card.revealed .gift-reveal-inner {
+            transform: rotateY(180deg);
+        }
+        .gift-front, .gift-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gift-back {
+            transform: rotateY(180deg);
+        }
+        /* Responsive bento grid: avoid fixed tall empty space on mobile */
+        .bento-grid {
+            grid-auto-rows: 220px;
+        }
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-auto-rows: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b-[0.5px] border-amber-200/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+<nav class="flex justify-between items-center w-full px-6 sm:px-8 md:px-12 py-4 md:py-8 max-w-7xl mx-auto">
+<div class="text-lg sm:text-2xl font-serif tracking-[0.22em] sm:tracking-[0.3em] text-amber-200 whitespace-nowrap">HAFTOM TAEME</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif tracking-widest uppercase text-sm text-slate-400 hover:text-slate-100 hover:tracking-[0.4em] transition-all duration-500 ease-out" href="#journey">The Journey</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-400 hover:text-slate-100 hover:tracking-[0.4em] transition-all duration-500 ease-out" href="#evolution">The Evolution</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-400 hover:text-slate-100 hover:tracking-[0.4em] transition-all duration-500 ease-out" href="#memories">Memories</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-400 hover:text-slate-100 hover:tracking-[0.4em] transition-all duration-500 ease-out" href="#gift">Gift</a>
+<a class="font-serif tracking-widest uppercase text-sm text-amber-200 border-b border-amber-200/50 pb-1 hover:tracking-[0.4em] transition-all duration-500 ease-out" href="#rsvp">RSVP</a>
+</div>
+<button aria-controls="mobileMenu" aria-expanded="false" class="md:hidden text-amber-200 p-2 -mr-2" id="mobileMenuButton" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Mobile menu -->
+<div aria-hidden="true" class="fixed inset-0 bg-black/60 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity md:hidden" id="mobileMenuOverlay"></div>
+<div class="fixed top-0 right-0 h-dvh w-[min(88vw,420px)] bg-slate-950/95 border-l border-amber-200/10 shadow-[0_30px_80px_rgba(0,0,0,0.9)] translate-x-full transition-transform duration-300 md:hidden" id="mobileMenu" role="dialog" aria-modal="true">
+<div class="px-6 py-6 flex items-center justify-between border-b border-amber-200/10">
+<div class="text-base font-serif tracking-[0.22em] text-amber-200 whitespace-nowrap">HAFTOM TAEME</div>
+<button class="text-amber-200 p-2 -mr-2" id="mobileMenuClose" type="button" aria-label="Close menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="px-6 py-8 flex flex-col gap-6">
+<a class="font-serif tracking-widest uppercase text-sm text-slate-200/90 hover:text-white transition-colors" href="#journey" data-mobile-nav>THE JOURNEY</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-200/90 hover:text-white transition-colors" href="#evolution" data-mobile-nav>THE EVOLUTION</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-200/90 hover:text-white transition-colors" href="#memories" data-mobile-nav>MEMORIES</a>
+<a class="font-serif tracking-widest uppercase text-sm text-slate-200/90 hover:text-white transition-colors" href="#gift" data-mobile-nav>GIFT</a>
+<a class="font-serif tracking-widest uppercase text-sm text-amber-200 border-b border-amber-200/40 pb-2 w-fit" href="#rsvp" data-mobile-nav>RSVP</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-28">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of a luxury ballroom with crystal chandeliers, dark navy walls, and warm golden lighting reflecting off polished floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn5TtAL16YqmHVBYBQBi9kwCPF4CIlPVnKmPK2-dzENkHSHhxu_L12YCVStQQNWGUcJ1y55VNM3qEBrsZQ31r84-PGEHphgK4Kj9WeQ3RofL_yPx2WVCfyZqMp8Ok6SFqfGNUf2ycaiAXyo-uVIkklfJW2-COrtf5GqaVI1Aoo460NhcBTf7Jd5HV_c__d9e_T0tfwkePgTkpOiwQHBT3DtWvafKQrXzi7jmfXmt_n1zrInKD_1TfC1Tu6DJAeK8KcEahItYeWS1qf"/>
+<div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-background to-background"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<span class="font-label-caps text-secondary tracking-[0.4em] mb-8 block opacity-80">ESTABLISHED MCMLXXXXVI</span>
+<h1 class="font-display-xl text-on-surface mb-6 text-glow text-[clamp(2.6rem,8.5vw,4.5rem)] leading-[1.05]">
+                    HAFTOM TAEME
+                </h1>
+<div class="fine-line-gold mb-8 mx-auto max-w-[200px]"></div>
+<p class="font-headline-md italic text-tertiary tracking-widest opacity-90 text-[clamp(1.1rem,4.5vw,2rem)]">
+                    A Celebration of Twenty Eight Years
+                </p>
+<!-- Spotify Player Placeholder -->
+<div class="mt-12 flex flex-col items-center gap-6">
+<div class="w-full max-w-sm bg-slate-950/40 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl flex items-center p-4 group cursor-pointer hover:border-secondary/30 transition-colors">
+<div class="w-12 h-12 bg-secondary/20 rounded-md flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-secondary text-2xl group-hover:scale-110 transition-transform">play_arrow</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-[10px] font-label-caps text-secondary/60 tracking-widest">NOW CURATING</p>
+<p class="text-sm font-serif text-white/90">Midnight in Mayfair — Official Playlist</p>
+</div>
+<div class="flex gap-1 items-end h-4">
+<div class="w-[2px] h-3 bg-secondary/60 animate-bounce"></div>
+<div class="w-[2px] h-4 bg-secondary animate-bounce [animation-delay:0.2s]"></div>
+<div class="w-[2px] h-2 bg-secondary/40 animate-bounce [animation-delay:0.4s]"></div>
+</div>
+</div>
+<div class="w-px h-16 bg-gradient-to-b from-secondary to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- The Legacy Section -->
+<section class="py-16 md:py-[120px] px-6 sm:px-8 lg:px-[120px] bg-background" id="journey">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 border border-secondary/20 translate-x-8 translate-y-8 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
+<img class="relative z-10 aspect-[3/4] object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000" data-alt="High-end studio portrait of a handsome man in a charcoal designer suit, moody lighting with deep shadows and soft highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOEhJfVqMFjZElzETBcXSsvHQPiw0LD8VN514lCkgHpSbuZByhCXeDHbdgtumOte_2egqxmAs-sQSoT91yrb3Y5MOsCkkW_Av2kBgMM4A1tMt2nT8CDd0kctB9-_l70NNRUDtYrNPFVrVXZ_yo14gVlS2y50Re_7glS4JOtDJ9TwK5Cz1i2FBbuzaSJOmaFvvTIvFA9JIPcvXitZSPLWEX9sYqgzjouJIYkyIHGcWSTvO0uQdtEJKSmfn6gF9jIr1ugX-hLypfYYKw"/>
+</div>
+<div class="space-y-10">
+<span class="font-label-caps text-secondary">THE LEGACY</span>
+<h2 class="font-headline-lg text-on-surface">Defining Twenty Eight</h2>
+<div class="space-y-6 text-body-lg text-on-surface-variant font-light">
+<p>
+                            Twenty-eight years of refinement, of navigating the world with a vision as sharp as the silhouette of a tailored coat. Haftom Taeme has built a journey defined by curiosity and a quiet, unyielding pursuit of excellence.
+                        </p>
+<p class="italic font-serif">
+                            "True luxury is not found in the volume of the voice, but in the clarity of the character."
+                        </p>
+<p>
+                            From the bustling energy of urban landscapes to the serene horizons of global exploration, each chapter has been etched with intentionality and grace. Tonight, we honor the man behind the legacy.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Evolution Section -->
+<section class="py-16 md:py-[120px] bg-surface-dim relative" id="evolution">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-secondary/50 via-secondary/20 to-transparent hidden md:block"></div>
+<div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+<div class="text-center mb-24">
+<span class="font-label-caps text-secondary mb-4 block">THE JOURNEY THROUGH TIME</span>
+<h2 class="font-headline-lg">Chapters of Evolution</h2>
+</div>
+<div class="space-y-32">
+<!-- Stage 1 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2 md:text-right">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="text-4xl mb-4">👶</div>
+<h3 class="font-serif text-2xl text-secondary mb-2">Baby Steps</h3>
+<p class="text-on-surface-variant font-light italic">The dawn of curiosity in MCMLXXXXVI. A world waiting to be explored.</p>
+</div>
+</div>
+<div class="relative flex items-center justify-center shrink-0">
+<div class="w-12 h-12 bg-background border-2 border-secondary rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary text-sm">potted_plant</span>
+</div>
+</div>
+<div class="w-full md:w-1/2"></div>
+</div>
+<!-- Stage 2 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2 order-2 md:order-1"></div>
+<div class="relative flex items-center justify-center shrink-0 order-1 md:order-2">
+<div class="w-12 h-12 bg-background border-2 border-secondary rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary text-sm">auto_stories</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-3">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="text-4xl mb-4">👦</div>
+<h3 class="font-serif text-2xl text-secondary mb-2">Early Years</h3>
+<p class="text-on-surface-variant font-light italic">Building the foundation. Character forged through wonder and discovery.</p>
+</div>
+</div>
+</div>
+<!-- Stage 3 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2 md:text-right">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="text-4xl mb-4">🎓</div>
+<h3 class="font-serif text-2xl text-secondary mb-2">The Scholar</h3>
+<p class="text-on-surface-variant font-light italic">Expanding horizons. The pursuit of knowledge meets the flame of ambition.</p>
+</div>
+</div>
+<div class="relative flex items-center justify-center shrink-0">
+<div class="w-12 h-12 bg-background border-2 border-secondary rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary text-sm">school</span>
+</div>
+</div>
+<div class="w-full md:w-1/2"></div>
+</div>
+<!-- Stage 4 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2 order-2 md:order-1"></div>
+<div class="relative flex items-center justify-center shrink-0 order-1 md:order-2">
+<div class="w-12 h-12 bg-background border-2 border-secondary rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-secondary text-sm">work</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-3">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="text-4xl mb-4">💼</div>
+<h3 class="font-serif text-2xl text-secondary mb-2">The Visionary</h3>
+<p class="text-on-surface-variant font-light italic">Mapping the future. Establishing a legacy of precision and impact.</p>
+</div>
+</div>
+</div>
+<!-- Stage 5 -->
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2 md:text-right">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-2xl hover:border-secondary/40 transition-colors group">
+<div class="text-4xl mb-4">🥂</div>
+<h3 class="font-serif text-2xl text-secondary mb-2">The Modern Man at 28</h3>
+<p class="text-on-surface-variant font-light italic">The pinnacle of a journey. Sophisticated, seasoned, and truly himself.</p>
+</div>
+</div>
+<div class="relative flex items-center justify-center shrink-0">
+<div class="w-12 h-12 bg-secondary border-2 border-secondary rounded-full flex items-center justify-center z-10 shadow-[0_0_20px_rgba(233,195,73,0.5)]">
+<span class="material-symbols-outlined text-on-secondary text-sm">celebration</span>
+</div>
+</div>
+<div class="w-full md:w-1/2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Gallery: Bento Grid -->
+<section class="py-16 md:py-[120px] bg-surface-container-lowest" id="memories">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="text-center mb-20">
+<span class="font-label-caps text-secondary mb-4 block">CURATED MEMORIES</span>
+<h2 class="font-headline-lg">A Life in Motion</h2>
+</div>
+<div class="bento-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 overflow-hidden relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Modernist city architecture at night with golden light spilling from windows into dark blue streets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuKtqyQdF6Q5EeojiqvWFdamEp9SOndHdjK7BcSq4k2MhkHR-670b3eFV11V1P0NKoiXat-sz-gHE7W2S_brAlAZv0-5BJ-73wsFLN0del5siDlQQkWOya_1WpYczKYdzy7DeNsh3ZwpkbfXypkNGLZK6JVDkTu0bUiYuSr1J0U4PgFLm1F8pQ5tTljvXyPb_IiPkrhYMuTVnSvx_nUg6SqXLFWGZv0152hG4RQHl41JeCRibrZQStHmDWEK2Ipe4Eeh6lX4DW9HAa"/>
+<div class="absolute bottom-6 left-6 font-label-caps text-white/60">London, MMXXIII</div>
+</div>
+<div class="overflow-hidden relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Luxury vintage sports car parked in front of a minimalist stone building at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFP2nYyo6rN1bXiJTitppQFTZD23Q6w9uSfa4KZdGGYdtVmgHt-l4TbRzpBLSO7OxrfjYEiDhgg1ogqgw07Wo_v_FVn3XFgJSpvtpbnvYKkmkwH-WyZLOmt_VvlKf51ZhkOTTgDFMZXjiAX3BYGhIoMZJZ9hQ7nETbEaHh1O_Nj5rK-MmqItJXC_tdUe9wcSab8xbckA2U-BVd3NbV45Djno9WVxRHMVK3T_W6LnsLD_XHTpFktT2pF31mab1cVe64UlATNqAoO3Ap"/>
+</div>
+<div class="overflow-hidden relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Exquisite dinner table setting with fine bone china and gold silverware under dim ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqGdK1TplJr8SyVVU9Ldgi1n2QIAefe5xAfTtV8kas4Rax3UlXfTmM9woJAsrYXR0t6fMCAC5spbdTX7BEQRhwbBUBydtDkGVp12R25m-iMS8X7fps0CiaSaMN8VVbAqdE5_sMQ32PgGAymKR8y6lPyMDOH8Oh47ykpUOXkIyTupujEx2PLDBv1RdIv_3-bIbENb9w_8dS9x26kVntTwm_G6hcCtBHjiIyaEI02T6hH0kUqCRRYNlg0ezb3lXOSqC3IQxEg2Wuv9v"/>
+</div>
+<div class="sm:col-span-2 md:col-span-2 overflow-hidden relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Breathtaking view of Alpine peaks during the blue hour with a solitary luxury cabin in the foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDovqSrK5Xdoi3jnMiOAyXKccuuQ9zR_jPK2y0hitJd-BLdq3w1gi0RHbPOlSLwGsz4uZRrMH6xkI4pYNEz7F1L3pI79Ekp7K93_qxhKt8t2t-dZ1C6RB3UMtcnkzqaZRsNO89SPla4q74CFb1S9Ao6x-AO3KHDHopY4qefzkuuIGkwNNWCD2YNILBcz0LL6rv_-KAWA6avPvG4lb4EDyCYEYunqRRMSzbzlux0-G2ap2gAHQJ_Tjb-hjf_2ZPPtDTA-lzq4a8LSaC"/>
+<div class="absolute bottom-6 right-6 font-label-caps text-white/60">Swiss Alps Expedition</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Digital Gift Section -->
+<section class="py-16 md:py-[120px] bg-slate-950 flex flex-col items-center" id="gift">
+<div class="max-w-4xl mx-auto px-8 w-full text-center mb-16">
+<span class="font-label-caps text-secondary mb-4 block">A DIGITAL TOKEN</span>
+<h2 class="font-headline-lg">Sister's Digital Gift</h2>
+<p class="mt-4 text-tertiary/60 font-light italic">Tap to reveal a heartfelt secret</p>
+</div>
+<div class="gift-reveal-card w-full max-w-lg aspect-[1.6/1] cursor-pointer" onclick="this.classList.toggle('revealed')">
+<div class="gift-reveal-inner relative w-full h-full">
+<!-- Front of Card (Gift Envelope) -->
+<div class="gift-front rounded-2xl bg-obsidian border-[0.5px] border-secondary/30 shadow-[0_0_60px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-6 sm:p-10 md:p-12 overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(233,195,73,0.1),transparent)] pointer-events-none"></div>
+<div class="w-24 h-24 mb-6 rounded-full border border-secondary/20 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-secondary text-4xl animate-pulse">lock</span>
+<div class="absolute -inset-4 border border-secondary/10 rounded-full animate-[spin_10s_linear_infinite]"></div>
+</div>
+<div class="text-center">
+<p class="font-serif italic text-2xl text-secondary mb-2">For My Brother</p>
+<p class="font-label-caps text-[10px] tracking-[0.4em] text-white/40">SECURED WITH AFFECTION</p>
+</div>
+<div class="absolute bottom-8 right-8">
+<span class="material-symbols-outlined text-secondary/20 text-6xl">redeem</span>
+</div>
+</div>
+<!-- Back of Card (The Reveal) -->
+<div class="gift-back rounded-2xl bg-[#0e1113] border-[0.5px] border-secondary shadow-[0_0_80px_rgba(233,195,73,0.15)] flex flex-col p-6 sm:p-8 md:p-10 overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-secondary/40">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young woman with a graceful expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKTwK2DLqD_Y5Eiauy7G1D3gvHDvr6LAX2ZOmD1dabmI-tAPUs41RVVg1QYtIr2VuHerJfN2709kdIiTbKc7facLU4O9ZwUZivHEchizIyHLN2j4ckOGctZlvdr640XWWmEIPqaT_9KJ-bq3pDxK-LxsXy-cgwRjeRiY4PtV2pxcVANTQKsgVViNcDL0iHOvqytXY_lviHWLWys_slhiYxQ8mOK6YBE_biQ8pphMGfDN5-aYJijCF4MNlPoMZ_hiY2tDpkAtSpZvqu"/>
+</div>
+<div>
+<p class="font-label-caps text-secondary text-[10px] tracking-widest">A SISTER'S MESSAGE</p>
+<p class="font-serif italic text-white/90">Beyond the horizon...</p>
+</div>
+</div>
+<div class="flex-1">
+<p class="font-headline-md italic text-lg leading-relaxed text-tertiary mb-6">
+                                "Your 28th year marks a crossing into true mastery. To celebrate, I've curated a private villa retreat in Tuscany for your next winter escape."
+                            </p>
+<div class="bg-secondary/10 border border-secondary/30 p-4 rounded-lg flex items-center justify-between group/code">
+<div>
+<p class="font-label-caps text-[8px] text-secondary/60 mb-1">ACCESS CODE</p>
+<p class="font-mono text-secondary tracking-widest font-bold">HAFTOM-XXVIII-LUXE</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm opacity-50 group-hover/code:opacity-100 transition-opacity">content_copy</span>
+</div>
+</div>
+<p class="mt-8 font-label-caps text-[10px] text-white/30 italic text-center">VALID FOR MMXXV EXPEDITION</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tribute Summary -->
+<section class="py-[60px] bg-background">
+<div class="max-w-4xl mx-auto px-8 border-t border-secondary/10 pt-12">
+<h3 class="font-headline-md italic font-light text-on-surface text-center leading-relaxed">
+                    "To my dearest brother, Haftom. Your strength is quiet, your kindness is boundless, and your light is unforgettable."
+                </h3>
+</div>
+</section>
+<!-- RSVP Section -->
+<section class="py-16 md:py-[120px] bg-surface-container-low" id="rsvp">
+<div class="max-w-5xl mx-auto px-6 sm:px-8 text-center">
+<div class="mb-16">
+<span class="font-label-caps text-secondary mb-4 block">THE EVENT</span>
+<h2 class="font-headline-lg mb-8">Join the Celebration</h2>
+<div class="fine-line-gold mx-auto max-w-[100px] mb-8"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-12 mb-20">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary">calendar_today</span>
+<p class="font-label-caps text-white/50">WHEN</p>
+<p class="font-headline-md text-on-surface">October 24th<br/>MMXXIV</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<p class="font-label-caps text-white/50">WHERE</p>
+<p class="font-headline-md text-on-surface">The Obsidian Suite<br/>Skyline Plaza</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary">checkroom</span>
+<p class="font-label-caps text-white/50">ATTIRE</p>
+<p class="font-headline-md text-on-surface">Black Tie<br/>Mandatory</p>
+</div>
+</div>
+<div class="max-w-xl mx-auto">
+<form class="space-y-12">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-secondary/20 py-4 font-label-caps text-secondary placeholder:text-secondary/30 focus:ring-0 focus:border-secondary transition-colors outline-none" placeholder="FULL NAME" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-secondary/20 py-4 font-label-caps text-secondary placeholder:text-secondary/30 focus:ring-0 focus:border-secondary transition-colors outline-none" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+<button class="w-full py-6 gold-shimmer text-on-secondary font-label-caps text-sm tracking-[0.3em] hover:opacity-90 transition-all duration-500 shadow-xl" type="submit">
+                            RESERVE MY PLACE
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-amber-200/10">
+<div class="flex flex-col items-center justify-center py-20 gap-8 w-full max-w-7xl mx-auto">
+<div class="text-amber-200/40 font-serif italic text-2xl tracking-[0.2em]">HAFTOM TAEME</div>
+<div class="flex flex-wrap justify-center gap-x-10 gap-y-4 px-6">
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-slate-600 hover:text-amber-200 transition-colors duration-300" href="#journey">The Journey</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-slate-600 hover:text-amber-200 transition-colors duration-300" href="#evolution">The Evolution</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-slate-600 hover:text-amber-200 transition-colors duration-300" href="#memories">Memories</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-slate-600 hover:text-amber-200 transition-colors duration-300" href="#gift">Gift</a>
+<a class="font-serif text-[10px] tracking-[0.2em] uppercase text-amber-200 transition-colors duration-300" href="#rsvp">RSVP</a>
+</div>
+<div class="font-serif text-[10px] tracking-[0.2em] uppercase text-amber-200/60 mt-8 opacity-80 hover:opacity-100">
+                © MMXXIV HAFTOM TAEME. AN EXCLUSIVE CELEBRATION.
+            </div>
+</div>
+</footer>
+<script>
+        (() => {
+            const btn = document.getElementById("mobileMenuButton");
+            const panel = document.getElementById("mobileMenu");
+            const overlay = document.getElementById("mobileMenuOverlay");
+            const closeBtn = document.getElementById("mobileMenuClose");
+            if (!btn || !panel || !overlay || !closeBtn) return;
+
+            const open = () => {
+                btn.setAttribute("aria-expanded", "true");
+                overlay.setAttribute("aria-hidden", "false");
+                overlay.classList.remove("opacity-0", "pointer-events-none");
+                overlay.classList.add("opacity-100");
+                panel.classList.remove("translate-x-full");
+                document.documentElement.classList.add("overflow-hidden");
+            };
+
+            const close = () => {
+                btn.setAttribute("aria-expanded", "false");
+                overlay.setAttribute("aria-hidden", "true");
+                overlay.classList.add("opacity-0", "pointer-events-none");
+                overlay.classList.remove("opacity-100");
+                panel.classList.add("translate-x-full");
+                document.documentElement.classList.remove("overflow-hidden");
+            };
+
+            btn.addEventListener("click", () => {
+                const expanded = btn.getAttribute("aria-expanded") === "true";
+                expanded ? close() : open();
+            });
+            closeBtn.addEventListener("click", close);
+            overlay.addEventListener("click", close);
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") close();
+            });
+            panel.querySelectorAll("[data-mobile-nav]").forEach((a) => {
+                a.addEventListener("click", close);
+            });
+        })();
+    </script>
+</body></html>
